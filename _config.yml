@@ -1,0 +1,58 @@
+# Mandatory settings
+
+name: Chalk
+paginate: 25
+url: # add your site url (format: https://example.com/)
+blog_theme: light # Or use dark
+
+# Optional settings
+about_enabled: false        # Change to true if you wish to show an icon in the navigation that redirects to the about page
+discus_identifier:          # Add your Disqus identifier
+ga_analytics:               # Add your GA Tracking Id
+local_fonts: false          # Change to true if you wish to use local fonts
+rss_enabled: true           # Change to false if not
+scrollappear_enabled: true  # Change to false to disable
+
+# Social platforms settings
+social:
+  dribbble: nielsenramon
+  github:   nielsenramon
+  twitter:  nielsenramon
+  facebook: # Add your Facebook handle
+  flickr:   # Add your Flickr handle
+  linkedin: # Add your LinkedIn handle
+  email:    # Add your Email address
+  bitcoin:  # Add your Bitcoin link or address
+
+# Important settings (change at own risk)
+theme: jekyll-theme-chalk
+
+# Configure theme assets availability
+assets:
+  cache: false
+  features:
+    automatic_img_size: false
+
+collections:
+  my_tags:
+    output: true
+    permalink: /tag/:slug/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: articles_by_tag
+
+gems:
+  - jekyll-assets
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
+  - jekyll-theme-assets
+  - jekyll-theme-pages
+
+paginate_path: /posts/page/:num/
+permalink: posts/:slug
